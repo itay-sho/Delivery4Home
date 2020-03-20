@@ -7,4 +7,5 @@ class Volunteer(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='volunteer')
     name = models.CharField(max_length=100)
     location = PlainLocationField(default='-1.0, -1.0')
+    telegram_user_id = models.BigIntegerField()
 
